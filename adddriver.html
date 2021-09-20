@@ -1,0 +1,85 @@
+
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Devices </title>
+    <style>
+        .left {
+            width: 30%;
+            float: left;
+            text-align: right;
+        }
+        .right {
+            width: 65%;
+            margin-left: 10px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+<h2>Add Devices</h2><br />
+
+<form action="/adddriver" method="post">
+
+    <div >
+        <div class="left">
+            Device Name:
+        </div>
+        <div class="right">
+            <input name="device_name" type="text" /> <br />
+        </div>
+    </div>
+
+    <div>
+        <div class="left">
+            Driver:
+        </div>
+        <div class="right">
+            <input name="driver_name" type="text" /> <br />
+        </div>
+    </div>
+
+    <div>
+        <div class="left">
+            API:
+        </div>
+        <div class="right">
+            <input name="api_name" type="text" /> <br />
+        </div>
+    </div>
+
+    <div>
+        <div class="left">
+            Vendor:
+        </div>
+        <div class="right">
+            <input name="vendor_name" type="text" /> <br />
+        </div>
+    </div>
+    <div>
+        <div class="left">
+            Date
+        </div>
+        <div class="right">
+            <input name="issue_date" type="date" /> <br />
+        </div>
+    </div>
+
+    <!-- <input type="hidden" value="{{driver_id}}" name="driver_id"/> -->
+
+    <br /><h3>Features :</h3>
+    Geometry Shader : <input type="checkbox" name="geometry_shader"  ><br />
+    Tesse Shader : <input type="checkbox" name="tesse_shader" ><br />
+    ShaderInt16 : <input type="checkbox" name="shader_int" ><br />
+    Sparse Binding : <input type="checkbox" name="sparse_binding" > <br />
+    TextureCompression ETC2 : <input type="checkbox" name="texture_compression" > <br />
+    Vertex Pipeline Stores And Atomics : <input type="checkbox" name="vertex_pipeline" ><br /><br />
+    <input type="submit" value="Cancel" name="cancel" />
+    <input type="submit" value="Submit" name="add_driver" />
+    <p style="color:green;font-size:12px">{{ Message }}</p>
+</form>
+</body>
+</html>

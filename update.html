@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+<form  method="post">
+<div>
+
+
+
+      <input type="text" name="devisename" value="{{ list.device_name }}" disabled/> :Device Name<br></br>
+
+
+
+        <input type="text" name="drivername" value="{{ list.driver_name }}"/> :Driver<br></br>
+
+
+
+     <input type="text" name="apiname" value="{{ list.api_name }}"/> :API<br></br>
+
+
+
+      <input type="text" name="vendorname" value="{{ list.vendor_name }}"/> :Vendor<br></br>
+
+
+
+    <input type="date" name="date" value='{{ list.date }}'/> :Date<br></br>
+
+{% if list.geometry_shader %}
+<input name="radio_geometry" type="checkbox" checked/>
+{% else %}
+<input name="radio_geometry" type="checkbox"/>
+{% endif %}
+Geometry Shader <br />
+
+{% if list.teselation_shader %}
+<input name="radio_teselation_shader" type="checkbox" checked/>
+{% else %}
+<input name="radio_teselation_shader" type="checkbox"/>
+{% endif %}
+Tesse Shader <br />
+
+{% if list.shader %}
+<input name="radio_shader_int" type="checkbox" checked/>
+{% else %}
+<input name="radio_shader_int" type="checkbox" />
+{% endif %}
+ShaderInt16 <br />
+
+{% if list.sparse_binding %}
+<input name="radio_sparse_blinding" type="checkbox" checked />
+{% else %}
+<input name="radio_sparse_blinding" type="checkbox" />
+{% endif %}
+Sparse Binding <br />
+
+{% if list.texture_compression %}
+<input name="radio_texture" type="checkbox" checked />
+{% else %}
+<input name="radio_texture" type="checkbox" />
+{% endif %}
+TextureCompression ETC2 <br />
+
+{% if list.vertex_pipeline %}
+<input name="radio_vertex" type="checkbox" checked/>
+{% else %}
+<input name="radio_vertex" type="checkbox" />
+{% endif %}
+Vertex Pipeline Stores And Atomics <br /><br />
+<input type="submit" value="Update" name="Update" />
+{{Message}}
+</div>
+</form>
+<form action="\">
+  </div>
+    <input type="submit" value="Cansal" name="Cansal" />
+</div>
+</form>
+</body>
+</html>
